@@ -7,8 +7,8 @@ $result = $conn->query($sql);
 ?>
 
 <div class="hero">
-    <h1>Chào Mừng Đến Hệ Thống Quản Lý Chung Cư</h1>
-    <p>Hệ thống quản lý chung cư giúp bạn quản lý cư dân, căn hộ và các dịch vụ một cách dễ dàng và hiệu quả.</p>
+    <h1>Khám Phá Không Gian Sống Đẳng Cấp</h1>
+    <p>Hệ thống giới thiệu và quản lý chung cư hàng đầu, mang đến cho bạn những lựa chọn an cư lý tưởng với tiện ích vượt trội và vị trí đắc địa nhất.</p>
 </div>
 
 <div class="container">
@@ -17,7 +17,9 @@ $result = $conn->query($sql);
     <div class="grid">
         <?php while($row = $result->fetch_assoc()) { ?>
         <div class="card">
-            <div class="card-img"></div>
+            <div class="card-img">
+                <img src="" alt="Dự án 1">
+            </div>
             <div class="card-body">
                 <h3 class="card-title"><?php echo $row['ten_du_an']; ?></h3>
                 <a href="chitiet.php?id=<?php echo $row['id_du_an']; ?>" class="btn">Xem chi tiết</a>

@@ -1,15 +1,19 @@
 <?php
-// Cấu hình kết nối cơ sở dữ liệu.
-// Thay các giá trị dưới đây bằng thông tin thực tế của bạn trước khi triển khai.
-$host     = getenv('DB_HOST')     ?: "localhost";
-$dbname   = getenv('DB_NAME')     ?: "apartment_db";
-$username = getenv('DB_USER')     ?: "root";
-$password = getenv('DB_PASSWORD') ?: "";
+// Thông tin kết nối database
+$host = "localhost";
+$dbname = "webchungcu";  // Tên database vừa tạo
+$username = "root";
+$password = "";  // WAMP mặc định không có password
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Kết nối thất bại: " . $e->getMessage());
+// Kết nối MySQL
+$conn = mysqli_connect($host, $username, $password, $dbname);
+
+// Kiểm tra kết nối
+if (!$conn) {
+    die("Kết nối thất bại: " . mysqli_connect_error());
 }
-?>
+
+// Set utf8 cho tiếng Việt
+mysqli_set_charset($conn, "utf8mb4");
+?><?php
+

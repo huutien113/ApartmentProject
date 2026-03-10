@@ -1,7 +1,5 @@
-</main>
 <footer>
-    <p>&copy; <?php echo date('Y'); ?> Quản Lý Chung Cư. All rights reserved.</p>
-</footer>
-<script src="/asset/js/script.js"></script>
+        <p>&copy; 2026 Quản Lý Chung Cư. All rights reserved.</p>
+    </footer>
 </body>
 </html>

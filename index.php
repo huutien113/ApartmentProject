@@ -1,4 +1,10 @@
-<?php require_once 'includes/header.php'; ?>
+<?php
+require_once 'includes/config.php';
+require_once 'includes/header.php';
+
+$sql = "SELECT * FROM du_an";
+$result = $conn->query($sql);
+?>
 
 <div class="hero">
     <h1>Chào Mừng Đến Hệ Thống Quản Lý Chung Cư</h1>
@@ -9,32 +15,15 @@
     <h2 class="section-title">Dự Án Nổi Bật</h2>
     
     <div class="grid">
+        <?php while($row = $result->fetch_assoc()) { ?>
         <div class="card">
             <div class="card-img"></div>
             <div class="card-body">
-                <h3 class="card-title">Chung Cư Cao Cấp A</h3>
-                <p>Vị trí trung tâm, tiện ích ngập tràn.</p>
-                <a href="#" class="btn">Xem chi tiết</a>
+                <h3 class="card-title"><?php echo $row['ten_du_an']; ?></h3>
+                <a href="chitiet.php?id=<?php echo $row['id_du_an']; ?>" class="btn">Xem chi tiết</a>
             </div>
         </div>
-        
-        <div class="card">
-            <div class="card-img"></div>
-            <div class="card-body">
-                <h3 class="card-title">Chung Cư Tầm Trung B</h3>
-                <p>Không gian sống xanh, giá cả hợp lý.</p>
-                <a href="#" class="btn">Xem chi tiết</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-img"></div>
-            <div class="card-body">
-                <h3 class="card-title">Khu Đô Thị C</h3>
-                <p>Hiện đại, an ninh 24/7, gần trường học và bệnh viện.</p>
-                <a href="#" class="btn">Xem chi tiết</a>
-            </div>
-        </div>
+        <?php } ?>
     </div>
 </div>
 

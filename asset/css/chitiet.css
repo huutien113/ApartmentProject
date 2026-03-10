@@ -1,0 +1,39 @@
+.detail-container{
+max-width:1000px;
+margin:auto;
+}
+
+.image-slider img{
+width:100%;
+border-radius:10px;
+}
+
+.title{
+margin-top:20px;
+font-size:28px;
+color:#222;
+}
+
+.location{
+color:#666;
+margin-bottom:20px;
+}
+
+.info-box{
+display:flex;
+gap:40px;
+border-bottom:1px solid #ddd;
+padding-bottom:20px;
+margin-bottom:20px;
+}
+
+.item h3{
+font-size:22px;
+color:#003366;
+}
+
+.description{
+background:#fafafa;
+padding:20px;
+border-radius:8px;
+}

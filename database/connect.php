@@ -15,5 +15,5 @@ if (!$conn) {
 
 // Set utf8 cho tiếng Việt
 mysqli_set_charset($conn, "utf8mb4");
-?><?php
+?>
 

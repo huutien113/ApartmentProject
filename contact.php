@@ -1,3 +1,28 @@
+<?php
+// Xử lý form liên hệ
+require_once 'database/connect.php';
+
+$thong_bao = '';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Lấy dữ liệu từ form và bảo mật
+    $ho_va_ten = mysqli_real_escape_string($conn, $_POST['ho_va_ten']);
+    $so_dien_thoai = mysqli_real_escape_string($conn, $_POST['so_dien_thoai']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $loi_nhan = mysqli_real_escape_string($conn, $_POST['loi_nhan']);
+    
+    // Câu lệnh SQL insert
+    $sql = "INSERT INTO lien_he (ho_va_ten, so_dien_thoai, email, loi_nhan) 
+            VALUES ('$ho_va_ten', '$so_dien_thoai', '$email', '$loi_nhan')";
+    
+    // Thực thi và thông báo
+    if (mysqli_query($conn, $sql)) {
+        $thong_bao = "thanh_cong";
+    } else {
+        $thong_bao = "loi";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -21,6 +46,16 @@
     
     <div class="bang_lien_he">
         <h1 class="tieu_de_lien_he">Liên Hệ Với Chúng Tôi</h1>
+        
+        <?php if ($thong_bao == 'thanh_cong'): ?>
+            <div class="thong_bao thanh_cong">
+                ✅ Gửi thông tin thành công! Chúng tôi sẽ liên hệ với bạn sớm.
+            </div>
+        <?php elseif ($thong_bao == 'loi'): ?>
+            <div class="thong_bao loi">
+                ❌ Có lỗi xảy ra. Vui lòng thử lại!
+            </div>
+        <?php endif; ?>
         
         <form class="form_lien_he" method="POST" action="">
             <div class="nhom_input">

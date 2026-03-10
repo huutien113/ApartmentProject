@@ -1,0 +1,20 @@
+# Ignore file test
+test_connect.php
+
+# Ignore cấu hình cá nhân (nếu có)
+database/config_local.php
+
+# Ignore uploaded images
+asset/images/uploads/
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+error_log

@@ -9,7 +9,7 @@ if (empty($_SESSION['admin_logged_in'])) {
 require_once '../includes/header.php';
 ?>
 
-<h1>Trang Quản Trị</h1>
+<h1>Trang Quản Trị Viên</h1>
 <p>Chào mừng đến trang quản trị hệ thống quản lý chung cư.</p>
 
 <ul>

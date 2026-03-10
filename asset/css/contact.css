@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.thanh_dieu_huong {
+    background: linear-gradient(135deg, #003f7f 0%, #005fa3 100%);
+    padding: 0;
+}
+
+.container_thanh_dieu_huong {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo_trang {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.menu_dieu_huong {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu_dieu_huong a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.menu_dieu_huong a:hover {
+    opacity: 0.8;
+}
+
+.bang_lien_he {
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tieu_de_lien_he {
+    background: linear-gradient(135deg, #003f7f 0%, #005fa3 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: -30px -30px 30px -30px;
+    border-radius: 8px 8px 0 0;
+    font-size: 28px;
+}
+
+.form_lien_he {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nhom_input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nhan_input {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.o_nhap_lieu {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s;
+}
+
+.o_nhap_lieu:focus {
+    outline: none;
+    border-color: #003f7f;
+    box-shadow: 0 0 5px rgba(0, 63, 127, 0.3);
+}
+
+.o_textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.nut_gui {
+    background: linear-gradient(135deg, #003f7f 0%, #005fa3 100%);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.nut_gui:hover {
+    opacity: 0.9;
+}
+
+.nut_gui:active {
+    transform: scale(0.98);
+}
